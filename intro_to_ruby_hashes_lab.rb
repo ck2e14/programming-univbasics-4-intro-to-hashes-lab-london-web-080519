@@ -34,3 +34,4 @@ def update_counting_hash(hash, key)
   end
   return hash
 end
+#dont forget to return this hash otherwise Ruby treats the last line as the return value, which was failing the tests
