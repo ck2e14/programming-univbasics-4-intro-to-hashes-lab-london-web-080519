@@ -1,29 +1,35 @@
 def new_hash
-  # return an empty hash
+  new_hash = { }
 end
 
 def my_hash
-  # return a valid hash with any key/value pair of your choice
+  my_hash = {:Arsenal => "Koscielny"}
 end
 
 def pioneer
-  # return a hash with a key of :name and a corresponding value of 'Grace Hopper'
+  pioneer_hash = {:name => "Grace Hopper"}
 end
 
 def id_generator
-  # return a hash with a key :id assigned to positive integer
+  this_next_hash = {:id => 1}
 end
 
 def my_hash_creator(key, value)
-  # return a hash that includes the key and value parameters passed into this method
+  yet_another_lab_hash = {key => value}
 end
+#here you dont need  :  because it knows it is creating the key, you just refer it back to the paramter 'key' defined
+#in the method signature. Likewise => value doesn't need to be encolosed in quotation marks.
 
 def read_from_hash(hash, key)
-  # return the correct value using the hash and key parameters
+  hash[key]
 end
+#Similarly no : needed in this lookup method unlike if you were writing the command outside of a method (function)
+#where it might look like hash[:key]
 
 def update_counting_hash(hash, key)
-  # given a hash an a key as parameters, return an updated hash
-  # if the provided key is not present in the hash, add it and assign it to the value of 1
-  # if the provided key is present, increment its value by 1
+  if hash[key]
+    hash[key] += 1
+  else
+    hash[key] = 1
+  end
 end
